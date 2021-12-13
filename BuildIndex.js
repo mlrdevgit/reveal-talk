@@ -30,6 +30,7 @@ if (firstTitle) {
 }
 
 templateText = templateText.replace("<title>reveal.js</title>", "<title>" + title + "</title>");
+templateText = templateText.replace("talk.md", fso.GetFileName(markdownFile));
 
 file = fso.OpenTextFile(outputFile, ForWriting);
 file.Write(templateText);
